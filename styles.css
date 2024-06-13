@@ -1,1 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #005f73; 
+}
 
+h1 {
+    font-family: 'Roboto Slab', serif;
+}
+
+th, td {
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #262626;
+    text-align: left;
+}
+
+th {
+    background-color: #ee9b00;
+}
+
+/*a dditional */
+
+th {
+    font-weight: bold;
+}
+
+tbody td {
+    font-weight: normal;
+}
+
+.plus {
+    font-family: 'Roboto Medium', sans-serif;
+    cursor: pointer;
+    color: #005f73;
+}
