@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReadySetTravel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/logo.png"
+            alt="ReadySetTravel Logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <div class="mobile-menu">
+        <div class="menu-icon">
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="travel.html">Suggested Trips</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <ul class="mobile-links">
+        <li><a href="travel.html">Suggested Trips</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <!-- Main Content -->
     <div id="app">
-        <h1>ReadySetTravel | Weather Forecast</h1>
-        <table id="weatherData">
-            <!-- Dynamic Table -->
-            <thead>
-                <tr>
-                    <th>Days to Trip</th>
-                    <th>Trip Name</th>
-                    <th>Details</th>
-                    <th>Weather</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamic Table Rows -->
-            </tbody>
-        </table>
+      <h1>ReadySetTravel | Weather Forecast</h1>
+      <label for="citySelect">Select a City:</label>
+      <select id="citySelect">
+        <!-- Saved Data for Trips -->
+      </select>
+      <input type="text" id="notesInput" placeholder="Trip details here..." />
+      <button id="saveButton">Save Notes</button>
+      <table id="weatherData">
+        <thead>
+          <tr>
+            <th>Days to Trip</th>
+            <th>Trip Name</th>
+            <th>Details</th>
+            <th>Weather</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Saved Data for Trips -->
+        </tbody>
+      </table>
     </div>
-    <script type="module" src="app.js"></script>
-</body>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+      // Event listener - Save Notes button
+      document
+        .getElementById("saveButton")
+        .addEventListener("click", function () {
+          const citySelect = document.getElementById("citySelect");
+          const selectedCity = citySelect.value;
+          const notesInput = document.getElementById("notesInput").value;
+
+          // Details - update its content
+          const tableRows = document
+            .getElementById("weatherData")
+            .getElementsByTagName("tr");
+          for (let i = 0; i < tableRows.length; i++) {
+            const row = tableRows[i];
+            const cells = row.getElementsByTagName("td");
+            if (cells.length > 1 && cells[1].textContent === selectedCity) {
+              cells[2].textContent = notesInput; // Update "details" cell with notes
+              break;
+            }
+          }
+        });
+
+      function toggleMobileMenu() {
+        var mobileLinks = document.querySelector(".mobile-links");
+        mobileLinks.classList.toggle("active");
+      }
+
+      // Event listener - menu icon to toggle mobile menu
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", toggleMobileMenu);
+
+      // Call function to populate the weather table + dropdown on page load
+      populateWeatherTable();
+    </script>
+  </body>
 </html>

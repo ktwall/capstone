@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination Recommendations | ReadySetTravel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/logo.png"
+            alt="ReadySetTravel Logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <div class="mobile-menu">
+        <div class="menu-icon">
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="travel.html">Suggested Trips</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <ul class="mobile-links">
+        <li><a href="travel.html">Suggested Trips</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <!-- Main Body Content -->
+    <div id="app">
+      <h1>Destination Recommendations</h1>
+      <p>
+        Explore some of the best travel destinations around the world
+        recommended by our travel experts:
+      </p>
+      <ul>
+        <li>
+          <h2>Paris, France</h2>
+          <p>
+            Known as the City of Lights, Paris offers iconic landmarks like the
+            Eiffel Tower, Louvre Museum, and delicious French cuisine.
+          </p>
+        </li>
+        <li>
+          <h2>Tokyo, Japan</h2>
+          <p>
+            Experience a blend of tradition and modernity in Tokyo, with
+            attractions such as Shibuya Crossing, Meiji Shrine, and vibrant food
+            culture.
+          </p>
+        </li>
+        <li>
+          <h2>New York City, USA</h2>
+          <p>
+            Visit the Big Apple with its skyscrapers, Central Park, Broadway
+            shows and diverse neighborhoods offering something for every
+            traveler.
+          </p>
+        </li>
+        <li>
+          <h2>Sydney, Australia</h2>
+          <p>
+            Explore Sydney's stunning harbor, iconic Opera House, Bondi Beach,
+            and vibrant arts and culinary scenes under the Australian sun.
+          </p>
+        </li>
+        <li>
+          <h2>Rome, Italy</h2>
+          <p>
+            Step back in time in Rome with its ancient ruins, including the
+            Colosseum and Roman Forum, alongside Vatican City and mouthwatering
+            Italian cuisine.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+      function toggleMobileMenu() {
+        var mobileLinks = document.querySelector(".mobile-links");
+        mobileLinks.classList.toggle("active");
+      }
+
+      // Event listener for menu icon - toggle mobile menu
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", toggleMobileMenu);
+    </script>
+  </body>
+</html>
