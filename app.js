@@ -96,7 +96,7 @@ function updateWeatherTable(newTrip) {
     const row = document.createElement("tr");
 
     // Calculate - days to trip (placeholder)
-    const daysToTrip = newTrip.daysToTrip + " days out";
+    const daysToTrip = newTrip.daysToTrip + "";
 
     // Create table cells - populate with data
     const daysToTripCell = document.createElement("td");
