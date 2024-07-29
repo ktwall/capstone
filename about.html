@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About ReadySetTravel</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- Header -->
     <header>
       <div class="logo">
@@ -14,12 +14,13 @@
           <img src="images/logo.png" alt="ReadySetTravel Logo" class="logo-img" />
         </a>
       </div>
-      <div class="mobile-menu">
-        <div class="menu-icon">
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
-        </div>
+      <div class="menu-container">
+        <div class="mobile-menu">
+          <div class="menu-icon">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+          </div>
       </div>
       <nav>
         <ul class="nav-links">
@@ -35,41 +36,51 @@
 
     <!-- Main Body Content -->
     <div id="app">
-      <h1>About ReadySetTravel</h1>
-
-      <div class="image-container">
-        <div class="travel-photos">
-          <img src="images/travel_image1.png" alt="Travel Image 1" style="max-width: 350px;" />
-          <img src="images/travel_image2.png" alt="Travel Image 2" style="max-width: 350px;"/>
+        <h1>About ReadySetTravel</h1>
+        <div class="image-container">
+            <div class="travel-photos">
+                <img src="images/travel_image1.png" alt="Travel Image 1" class="responsive-img" width="50%" />
+                <img src="images/travel_image2.png" alt="Travel Image 2" class="responsive-img" width="50%"/>
+            </div>
         </div>
-      </div>
-
-      <div class="description">
-        <p>
-          The goal of ReadySetTravel is to provide users with accurate, up-to-date
-          information that helps them plan their adventures with ease. Founded
-          during the summer of 2024, ReadySetTravel is ready to take the world
-          by storm.
-        </p>
-        <br>
-        <p>
-          ReadySetTravel is all about making travel planning enjoyable and
-          stress-free. Get ready to plan your next adventure with confidence and
-          a smile!
-        </p>
-      </div>
+        <div class="description">
+            <p>
+                The goal of ReadySetTravel is to provide users with accurate, up-to-date information that helps them plan their adventures with ease. Founded during the summer of 2024, ReadySetTravel is ready to take the world by storm.
+            </p>
+            <br>
+            <p>
+                ReadySetTravel is all about making travel planning enjoyable and stress-free. Get ready to plan your next adventure with confidence and a smile!
+            </p>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel.html">Suggested Trips</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/x.png" alt="X"></a>
+            <a href="https://www.pinterest.com/"><img src="images/pinterest.png" alt="Pinterest"></a>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script>
-      function toggleMobileMenu() {
-        var mobileLinks = document.querySelector(".mobile-links");
-        mobileLinks.classList.toggle("active");
-      }
+        function toggleMobileMenu() {
+            var mobileLinks = document.querySelector(".mobile-links");
+            mobileLinks.classList.toggle("active");
+        }
 
-      document
-        .querySelector(".menu-icon")
-        .addEventListener("click", toggleMobileMenu);
+        document
+            .querySelector(".menu-icon")
+            .addEventListener("click", toggleMobileMenu);
     </script>
-  </body>
+</body>
 </html>

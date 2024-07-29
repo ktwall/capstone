@@ -9,33 +9,30 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="images/logo.png"
-            alt="ReadySetTravel Logo"
-            class="logo-img"
-          />
-        </a>
-      </div>
-      <div class="mobile-menu">
-        <div class="menu-icon">
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="ReadySetTravel Logo" class="logo-img" />
+          </a>
         </div>
-      </div>
-      <nav>
-        <ul class="nav-links">
+        <div class="menu-container">
+          <div class="mobile-menu">
+            <div class="menu-icon">
+              <div class="menu-bar"></div>
+              <div class="menu-bar"></div>
+              <div class="menu-bar"></div>
+            </div>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="travel.html">Suggested Trips</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </nav>
+        <ul class="mobile-links">
           <li><a href="travel.html">Suggested Trips</a></li>
           <li><a href="about.html">About Us</a></li>
         </ul>
-      </nav>
-      <ul class="mobile-links">
-        <li><a href="travel.html">Suggested Trips</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </header>
+      </header>
 
     <!-- Main Content -->
     <div id="app">
@@ -61,6 +58,23 @@
       </table>
     </div>
 
+      <!-- Footer -->
+      <footer>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel.html">Suggested Trips</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/x.png" alt="X"></a>
+            <a href="https://www.pinterest.com/"><img src="images/pinterest.png" alt="Pinterest"></a>
+        </div>
+    </footer>
+    
     <!-- Scripts -->
     <script src="app.js"></script>
     <script>
@@ -80,7 +94,7 @@
             const row = tableRows[i];
             const cells = row.getElementsByTagName("td");
             if (cells.length > 1 && cells[1].textContent === selectedCity) {
-              cells[2].textContent = notesInput; // Update "details" cell with notes
+              cells[2].textContent = notesInput; // Update - details cell with notes
               break;
             }
           }

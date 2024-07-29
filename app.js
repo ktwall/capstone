@@ -42,7 +42,7 @@ async function populateWeatherTable() {
 
     // Add - new trips from API
     weatherData.forEach(city => {
-        const daysToTrip = "10 days out"; //placeholder
+        const daysToTrip = "10 days out"; // Placeholder
         const newTrip = {
             location: city.location,
             daysToTrip: daysToTrip,
@@ -59,36 +59,6 @@ async function populateWeatherTable() {
 
     await populateCityDropdown(weatherData); // Dropdown for added notes
 }
-// ** The below was removed as I could not get the code to work **
-// // Function - save a new trip locally (simulated backend)
-// function saveNewTripLocally(newTrip) {
-//     storedTrips.push(newTrip);
-//     localStorage.setItem('storedTrips', JSON.stringify(storedTrips));
-// }
-
-// // Function - save a new trip
-// function saveNewTrip(event) {
-//     event.preventDefault(); // Prevent - form submission
-//     const tripNameInput = document.getElementById("tripName").value;
-//     const daysToTripInput = document.getElementById("daysToTrip").value;
-//     const weatherInput = document.getElementById("weather").value;
-
-//     const newTrip = {
-//         location: tripNameInput,
-//         daysToTrip: daysToTripInput,
-//         details: '', // "+"" equivalent if on index.html
-//         forecast: [{ temperature: 'N/A', condition: 'N/A' }] // Placeholder
-//     };
-
-//     // Saving new trip
-//     saveNewTripLocally(newTrip);
-
-//     // UI with new trip
-//     updateWeatherTable(newTrip);
-
-//     alert(`Trip "${tripNameInput}" added successfully!`);
-//     document.getElementById("addTripForm").reset(); // Reset - after submission
-// }
 
 // Function - update weather table UI 
 function updateWeatherTable(newTrip) {
@@ -122,12 +92,35 @@ function updateWeatherTable(newTrip) {
 }
 
 // Event listener - Save Trip 
-document.getElementById("addTripForm").addEventListener("submit", saveNewTrip);
+document.getElementById("addTripForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent - form submission
+    const tripNameInput = document.getElementById("tripName").value;
+    const daysToTripInput = document.getElementById("daysToTrip").value;
+    const weatherInput = document.getElementById("weather").value;
+
+    const newTrip = {
+        location: tripNameInput,
+        daysToTrip: daysToTripInput,
+        details: '', // "+"" equivalent if on index.html
+        forecast: [{ temperature: 'N/A', condition: 'N/A' }] // Placeholder
+    };
+
+    // Saving new trip
+    storedTrips.push(newTrip);
+    localStorage.setItem('storedTrips', JSON.stringify(storedTrips));
+
+    // UI with new trip
+    updateWeatherTable(newTrip);
+
+    alert(`Trip "${tripNameInput}" added successfully!`);
+    document.getElementById("addTripForm").reset(); // Reset - after submission
+});
 
 // Event listener - menu icon to toggle mobile menu
 document.querySelector('.menu-icon').addEventListener('click', function() {
     var mobileLinks = document.querySelector('.mobile-links');
     mobileLinks.classList.toggle('active');
+    this.classList.toggle('active'); 
 });
 
 // Call function - populate weather table and dropdown 
