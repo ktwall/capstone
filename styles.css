@@ -119,7 +119,7 @@ header {
     padding: 10px; 
 }
 
-/* Main Content */
+/* Main App Content */
 #app {
     max-width: 800px;
     margin: 20px auto;
@@ -158,7 +158,7 @@ header {
     padding: 10px 0;  
 }
 
-/* Index */
+/* Index (Home) */
 #citySelect,
 #notesInput,
 #saveButton {
