@@ -1,61 +1,71 @@
-# This is for my final Capstone Project for UF. For this assignment I am creating an application called ReadySetTravel. 
-
 # ReadySetTravel
 
-This is an application called ReadySetTravel. The goal of this application is to provide a user-friendly travel countdown app designed to simplify the process of tracking planned trips. In today's world, managing travel plans across various platforms can feel overwhelming, leading to stress and disorganization. ReadySetTravel aims to alleviate these challenges by providing a centralized platform where users can easily input, track, and count down to their upcoming trips.
+ReadySetTravel is a user-friendly travel planning application designed to simplify the process of managing and tracking planned trips. In today's world, coordinating travel plans across multiple platforms can be overwhelming, leading to stress and disorganization. ReadySetTravel centralizes trip details into one intuitive interface, helping users stay organized and stress-free.
 
 ## Features
 
 ### Core Features
-- **Trip Input and Management**
-  - Add the trip's name and destination.
-  - Select the calendar date for the trip.
-  - Include relevant travel details such as flights or hotel bookings in a form field.
-  - Enter the official city name to access weather data in Mockable.
-- **Weather Forecasts**
-  - Fetch static weather forecasts for trip destinations using Postman as the API development environment, ensuring users stay informed about weather conditions.
-- **Countdown Timers**
-  - Calculate and display countdown timers for each trip, providing a visual representation of the days remaining until departure to enhance the travel experience.
+
+* **Trip Input and Management**
+  * Select the city dropdown to add information.
+  * Include relevant travel details such as flights or hotel bookings.
+  * Enter city names to fetch weather data.
+
+* **Weather Forecasts**
+  * Fetch static weather forecasts for trip destinations using Mockable for weather information.
+
+* **Countdown Timers**
+  * Calculate and display countdown timers for each trip, showing the number of days remaining until departure. This feature is currently locked, with plans to update and improve it.
 
 ## Technology Stack
 
-- **API Development Environment**
-  - Postman (https://www.postman.com/): Used to design, test, and document the API endpoints.
-- **Static Database**
-  - Mockable (https://www.mockable.io/): Used to create a mock database for weather data without the complexities of setting up a full database server.
+* **API Development Environment:**
+  * [Postman](https://www.postman.com/): Used for designing, testing, and documenting the API endpoints.
+
+* **Static Database:**
+  * [Mockable](https://www.mockable.io/): Provides a mock database for weather data, simplifying data retrieval without the need for a full database server setup.
+
+* **Core Technologies:**
+  * HTML
+  * CSS
+  * JavaScript
 
 ## API Endpoints
 
 ### Weather Data
-- **GET /api/weather**: Endpoint to fetch weather data for a given location. This will utilize the mock database created in Mockable to provide weather forecasts.
+
+* **GET /api/weather**: Endpoint to fetch weather data for a given location. This will utilize the mock database created in Mockable to provide accurate weather forecasts.
 
 ## Deployment
 
-I plan to host the application on gardensgymnastics.com - this may be updated in the future.
+The application is hosted at: [https://ktwall.github.io/capstone/](https://ktwall.github.io/capstone/)
 
 ## Downloading and Editing the Application
 
 To download and edit the ReadySetTravel application, follow these steps:
 
 1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ktwall/capstone.git
+
 
 2. **Setup**
    - This project primarily uses HTML, CSS, and JavaScript.
 
 3. **Running the Application**
-   - Start the local server:
+   - Open the index.html file in your web browser to view the application locally.
 
 4. **Making Edits**
-   - You can edit the HTML, CSS, and JavaScript files in your preferred code editor. The main files are:
-     - `index.html`: The main HTML file.
-     - `about.html`: The about file.
-     - `addtrip.html`: The new trips file.
-     - `styles.css`: The CSS file for styling.
-     - `app.js`: The JavaScript file for the application's functionality.
+   - Edit the following files in your preferred code editor:
+     - `index.html`: Main HTML file.
+     - `about.html`: About page file.
+     - `travel.html`: File for learning about new destinations.
+     - `styles.css`: CSS file for styling.
+     - `app.js`: The JavaScript file for functionality.
 
 ## Contributing
 
-If you would like to contribute to the development of ReadySetTravel, please follow these steps:
+If you wish to contribute to ReadySetTravel, please follow these steps:
 
 1. **Fork the Repository**
 
